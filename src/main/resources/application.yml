@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: BeefTracker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/main
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache=false:

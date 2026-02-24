@@ -1,0 +1,16 @@
+<aside th:fragment="sidebar" class="flex items-start justify-start min-h-screen" x-data="{open: true}">
+    <div :class="{ 'w-44' : open, 'w-20 items-center': !open}" class="bg-slate-900 text-white min-h-screen flex flex-col gap-3 p-5">
+        <div>
+            <button @click="open = !open" class="self-start cursor-pointer">
+                <i x-show="open" data-lucide="menu" class="w-7 h-7 text-blue-700 bg-white p-1"></i>
+                <i x-show="!open" data-lucide="menu" class="w-7 h-7 text-white bg-blue-700 p-1"></i>
+            </button>
+        </div>
+        <div>
+            <a class="flex gap-2 items-center cursor-pointer" th:each="menu : ${menus}" th:href="${menu.path}">
+                <i th:data-lucide="${menu.icon}" class="w-5 h-5 text-white"></i>
+                <p x-show="open" th:text="${menu.descricao}">menu</p>
+            </a>
+        </div>
+    </div>
+</aside>

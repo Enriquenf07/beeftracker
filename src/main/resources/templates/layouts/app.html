@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="app(content)">
+<body>
+<section class="flex gap-10" id="layout-final">
+    <aside th:replace="~{fragments/menu :: sidebar}"></aside>
+    <div>
+        <div th:replace="${content}"></div>
+    </div>
+</section>
+</body>
+</html>

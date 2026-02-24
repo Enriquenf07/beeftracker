@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/base :: base(~{::section#page})}">
+<body>
+
+<section id="page">
+    <div th:replace="~{layouts/app :: app(~{::div#content})}">
+
+        <div id="content">
+            <h1 class="text-red-300">Bem-vindo ao Sistema!</h1>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
