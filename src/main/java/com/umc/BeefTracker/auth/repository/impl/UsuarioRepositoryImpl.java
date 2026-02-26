@@ -16,7 +16,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 
     @Override
     public Usuario findByEmail(String email) {
-        String sql = "SELECT * FROM usuarios WHERE email = ?";
+        String sql = "SELECT * FROM usuario WHERE email = ?";
 
         return jdbcTemplate.queryForObject(sql, usuarioRowMapper(), email);
     }
